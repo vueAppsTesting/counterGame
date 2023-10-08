@@ -1,0 +1,117 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+.clear:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+#app {
+    max-width: 800px;
+    margin: 0 auto;
+}
+.container-block {
+    width: 100%;
+    padding: 5px 15px;
+}
+.button-block {
+    font-size: 22px;
+    line-height: 30px;
+    text-align: center;
+    cursor: pointer;
+}
+.button-block:hover {
+    background: cyan;
+}
+.button-block.active {
+    background: rgb(118, 107, 150);
+    cursor: default;
+}
+.text-block {
+    font-size: 30px;
+    width: 100%;
+    line-height: 40px;
+    text-align: center;
+}
+
+
+.wrapper {
+    position: absolute;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, .8);
+}
+.message-content {
+    max-width: 800px;
+    padding: 15px;
+    margin: 50px auto;
+    border: 1px solid #000;
+    background: rgb(255, 255, 255);
+}
+.message-text {
+    text-align: center;
+    font-weight: bold;
+    font-size: 30px;
+    line-height: 40px;
+    color:rgb(0, 161, 0);
+}
+.false {
+    color:rgb(161, 0, 0);
+}
+
+.row {
+    padding: 5px 0;
+}
+.row:after {
+    content: ".";
+    display: block;
+    height: 0;
+    overflow: hidden;
+    clear: both;
+}
+.col-1,.col-2,.col-3,.col-4,.col-5, .col-6,.col-7,.col-8,.col-9,.col-10,.col-11,.col-12 {
+    float: left;
+}
+.col-1 {
+    width: 8.33%;
+}
+.col-2 {
+    width: 16.66%;
+}
+.col-3 {
+    width: 24.99%;
+}
+.col-4 {
+    width: 33.32%;
+}
+.col-5 {
+    width: 41.65%;
+}
+.col-6 {
+    width: 49.98%;
+}
+.col-7 {
+    width: 58.31%;
+}
+.col-8 {
+    width: 66.64%;
+}
+.col-9 {
+    width: 74.97%;
+}
+.col-10 {
+    width: 83.3%;
+}
+.col-11 {
+    width: 91.63%;
+}
+.col-12 {
+    width: 100%;
+}
