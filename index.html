@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style/main.css">
+</head>
+<body>
+    <div id="app">
+
+        <div class="container-block">
+            <div class="row">
+                <div class="col-3">
+                    <p class="button-block" :class="{active : task === '+'}" @click="task = '+'">+</p>
+                </div>
+                <div class="col-3">
+                    <p class="button-block" :class="{active : task === '-'}" @click="task = '-'">-</p>
+                </div>
+                <div class="col-3">
+                    <p class="button-block" :class="{active : task === '*'}" @click="task = '*'">*</p>
+                </div>
+                <div class="col-3">
+                    <p class="button-block" :class="{active : task === '/'}" @click="task = '/'">/</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-block">
+            <div class="row">
+                <div class="col-2">
+                    <p class="button-block" @click="leftNumber = 1" :class="{active : leftNumber === 1}">1</p>
+                </div>
+                <div class="col-2">
+                    <p class="button-block" @click="leftNumber = 2" :class="{active : leftNumber === 2}">2</p>
+                </div>
+                <div class="col-2">
+                    <p class="button-block" @click="leftNumber = 3" :class="{active : leftNumber === 3}">3</p>
+                </div>
+                <div class="col-2">
+                    <p class="button-block" @click="rightNumber = 1" :class="{active : rightNumber === 1}">1</p>
+                </div>
+                <div class="col-2">
+                    <p class="button-block" @click="rightNumber = 2" :class="{active : rightNumber === 2}">2</p>
+                </div>
+                <div class="col-2">
+                    <p class="button-block" @click="rightNumber = 3" :class="{active : rightNumber === 3}">3</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="container-block">
+            <p class="text-block">
+                {{ taskText }}
+            </p>
+        </div>
+
+        <div class="container-block">
+            <div class="row">
+                <div v-for="variant in taskVariantValues.v" :key="variant" @click="testClick(variant)" class="col-12">
+                    <p class="button-block">{{ variant }}</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="wrapper" v-if="showAnsver">
+            <div class="message-content">
+                <p class="message-text" :class="{false: userClickVariant != taskValue}">{{ taskText }} = {{ taskValue }}</p>
+                <p class="button-block" @click="newTask(); showAnsver = false">Ok</p>
+            </div>
+        </div>
+
+    </div>
+    <script src="libs/vue.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
